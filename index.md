@@ -1,4 +1,7 @@
-![]("_img\106501251_316629266160303_1890491195749236976_n.jpg")
+<img src="/_img/me.jpg"
+     style="float: center; margin-right: 10px;" />
+
+
 ___
 
 ### I am a cybersecurity student, developer, and Linux administrator.  I participate in the National Cyber League and educate students about Linux usage and security whenever possible.
