@@ -38,3 +38,12 @@ ___
 > #### When I find issues within certain projects such as applied hardening software, I try to point this out and send a fix to help the community as a whole.
 
 ___
+
+## Certifications
+
+|Vendor|Title|Verificatio|
+|-|-|-|
+|Cisco Systems Inc. | CCNA: Switching, Routing, and Wireless Essentials | <https://www.credly.com/badges/17d86e5b-3b7d-4d7c-b031-c6e168b5291b/public_url> |
+|Cisco Systems Inc. | CCNA: Enterprise Networking, Security, and Automation| <https://www.credly.com/badges/3fbc4c30-8542-4f11-a618-260dfbd8c3de/public_url>
+|Linux Professional Institute| Linux Essentials|lpi.org/v/LPI000472164/yymy84yt93 |
+|CompTIA| ITF+|<https://www.credly.com/badges/01dcc8bd-ed74-4c56-b83e-7c681b181832/public_url>|
