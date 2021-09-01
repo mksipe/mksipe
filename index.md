@@ -17,7 +17,7 @@ ___
 
 | ![](_layouts/assets/github.png) | ![](_layouts/assets/gitlab.png)|
 |-|-|
-| https://github.com/mksipe | https://gitlab.com/mksipe |
+| <https://github.com/mksipe> | <https://gitlab.com/mksipe> |
 
 #### Here are some personal projects that I am especially proud of.
 
@@ -45,5 +45,5 @@ ___
 |-|-|-|
 |Cisco Systems Inc. | CCNA: Switching, Routing, and Wireless Essentials | <https://www.credly.com/badges/17d86e5b-3b7d-4d7c-b031-c6e168b5291b/public_url> |
 |Cisco Systems Inc. | CCNA: Enterprise Networking, Security, and Automation| <https://www.credly.com/badges/3fbc4c30-8542-4f11-a618-260dfbd8c3de/public_url>
-|Linux Professional Institute| Linux Essentials|lpi.org/v/LPI000472164/yymy84yt93 |
+|Linux Professional Institute| Linux Essentials|<https://lpi.org/v/LPI000472164/yymy84yt93> |
 |CompTIA| ITF+|<https://www.credly.com/badges/01dcc8bd-ed74-4c56-b83e-7c681b181832/public_url>|
