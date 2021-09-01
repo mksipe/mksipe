@@ -15,10 +15,9 @@ ___
 
 #### Throughout the years, I have a series of project that I like to do on my freetime for practical use, or just for fun.
 
-
-| <img src=_layouts\assets\github.png style=zoom:5%;align:middle;/>|<img src="_layouts\assets\gitlab.png" style=zoom:2.5%;align:middle;/>|
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| https://github.com/mksipe                                    | https://gitlab.com/mksipe                                    |
+| ![](_layouts/assets/github.png) | ![](_layouts/assets/gitlab.png)|
+|-|-|
+| https://github.com/mksipe | https://gitlab.com/mksipe |
 
 #### Here are some personal projects that I am especially proud of.
 
