@@ -1,5 +1,5 @@
 
-<div style="text-align:center"><img src="https://mksipe.github.io/mksipe/_layouts/assets/me.jpg" /></div>
+<div style="text-align:center"><img src="_layouts/assets/me.jpg" /></div>
 
 ___
 
@@ -16,9 +16,9 @@ ___
 #### Throughout the years, I have a series of project that I like to do on my freetime for practical use, or just for fun.
 
 
-|<div style="text-align:center"><img src="_layouts/assets/github.png" style="width:50px;height:50px;"/></div> | <div style="text-align:center"><img src="_layouts/assets/gitlab.png" style="width:60px;height:60px;"/></div> | 
-|-|-|
-|https://github.com/mksipe|https://gitlab.com/mksipe|
+| <img src=_layouts\assets\github.png style=zoom:5%;align:middle;/>|<img src="_layouts\assets\gitlab.png" style=zoom:2.5%;align:middle;/>|
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| https://github.com/mksipe                                    | https://gitlab.com/mksipe                                    |
 
 #### Here are some personal projects that I am especially proud of.
 
@@ -31,14 +31,11 @@ ___
 
 #### I have been active when it comes to helping the community with different issues regarding open source software. 
 
-
-
 ### [Summit Technology Academy Scoring System](https://gitlab.com/summit-technology-academy/stasc)
 
 > #### This project was designed to make custom images that are intentionally vulnerable to determine who is learning in the classroom during a cybercamp session. This project was designed around modularity, such as choosing which vulnerabilities in what system and giving feedback upon completion or failure of securing the exposure.
 
 ### [Lynis](https://github.com/CISOfy/lynis)
 > #### When I find issues within certain projects such as applied hardening software, I try to point this out and send a fix to help the community as a whole.
-
 
 ___
