@@ -16,7 +16,7 @@ ___
 #### Throughout the years, I have a series of project that I like to do on my freetime for practical use, or just for fun.
 
 
-|<div style="text-align:center"><img src="https://mksipe.github.io/mksipe/_layout/assets/github.png" style="width:50px;height:50px;"/></div> | <div style="text-align:center"><img src="https://mksipe.github.io/mksipe/_layout/assets/gitlab.png" style="width:60px;height:60px;"/></div> | 
+|<div style="text-align:center"><img src="_layouts/assets/github.png" style="width:50px;height:50px;"/></div> | <div style="text-align:center"><img src="_layouts/assets/gitlab.png" style="width:60px;height:60px;"/></div> | 
 |-|-|
 |https://github.com/mksipe|https://gitlab.com/mksipe|
 
