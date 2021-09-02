@@ -15,7 +15,7 @@ ___
 
 #### Throughout the years, I have a series of project that I like to do on my freetime for practical use, or just for fun.
 
-| ![](_layouts/assets/github.png) | ![](_layouts/assets/gitlab.png)|
+| ![Github](_layouts/assets/github.png) | ![Gitlab](_layouts/assets/gitlab.png)|
 |-|-|
 | <https://github.com/mksipe> | <https://gitlab.com/mksipe> |
 
