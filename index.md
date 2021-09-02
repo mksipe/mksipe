@@ -1,5 +1,5 @@
+<center><img align="center" width="150" height="150" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/me.jpg"></center>
 
-<div style="text-align:center"><img src="/mksipe/blob/gh-pages/_layouts/assets/me.jpg" /></div>
 
 ___
 
@@ -15,7 +15,7 @@ ___
 
 #### Throughout the years, I have a series of project that I like to do on my freetime for practical use, or just for fun.
 
-| ![Github](https://github.com/mksipe/mksipe/blob/gh-pages/_layouts/assets/github.png) | ![Gitlab](https://github.com/mksipe/mksipe/blob/gh-pages/_layouts/assets/gitlab.png)|
+| <center><img align="center" width="50" height="50" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/github.png"></center>| <center><img align="center" width="50" height="50" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/gitlab.png"></center>|
 |-|-|
 | <https://github.com/mksipe> | <https://gitlab.com/mksipe> |
 
