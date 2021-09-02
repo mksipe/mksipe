@@ -15,7 +15,7 @@ ___
 
 #### Throughout the years, I have a series of project that I like to do on my freetime for practical use, or just for fun.
 
-| <center><img align="center" width="50" height="50" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/github.png"></center>| <center><img align="center" width="50" height="50" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/gitlab.png"></center>|
+| <img align="center" width="50" height="50" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/github.png">|<img align="center" width="55" height="50" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/gitlab.png">|
 |-|-|
 | <https://github.com/mksipe> | <https://gitlab.com/mksipe> |
 
@@ -23,7 +23,7 @@ ___
 
 |HTS4|SSL|DBCrack|Caecrack|
 |:-:|:-:|:-:|:-:|
-|github.com/mksipe/HTS4|github.com/mksipe/shell-script-lib|github.com/mksipe/dbcrack|github.com/caecrack|
+|<https://github.com/mksipe/HTS4>|<https://github.com/mksipe/shell-script-lib>|<https://github.com/mksipe/dbcrack>|<https://github.com/caecrack>|
 |This tool was my first attempt at applying the rust language to find vulnerable software and pen-testing tools on a Linux/mac/windows system. | This was one of my very first projects on Github that I started while still in cyberpatriot. SSL was designed to help make hardening the Linux system easier. | This was my first attempt to make a password cracker in python. The project switched it to rust to help with resource efficiency and stability to make processing as fast as possible. The fundamental issue was using SQLite, and I learned a valuable lesson when choosing a database.| Caecrack was a shot as making an automatic Ceasar cipher cracker to make a mass toolkit in the National Cyber League to make the cryptography section easier.|
 
 ## Group / Community Projects
@@ -57,5 +57,5 @@ ___
 - [Github](<https://github.com/mksipe>)
 - [HackTheBox](<https://app.hackthebox.eu/users/216835>)
 - NCL -  Available upon request.
-- Discord - Available uon request.
+- Discord - Available upon request.
 - [Email](<m-sipe@protonmail.com>)
