@@ -47,3 +47,15 @@ ___
 |Cisco Systems Inc. | CCNA: Enterprise Networking, Security, and Automation| <https://www.credly.com/badges/3fbc4c30-8542-4f11-a618-260dfbd8c3de/public_url>
 |Linux Professional Institute| Linux Essentials|<https://lpi.org/v/LPI000472164/yymy84yt93> |
 |CompTIA| ITF+|<https://www.credly.com/badges/01dcc8bd-ed74-4c56-b83e-7c681b181832/public_url>|
+
+___
+
+## Follow Up
+
+#### I am active on most major platforms. If you have any questions, don't hesitate to ask me for anything.
+
+- [Github](<https://github.com/mksipe>)
+- [HackTheBox](<https://app.hackthebox.eu/users/216835>)
+- NCL -  Available upon request.
+- Discord - Available uon request.
+- [Email](<m-sipe@protonmail.com>)
