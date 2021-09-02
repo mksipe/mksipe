@@ -19,16 +19,16 @@ ___
 |-|-|
 | <https://github.com/mksipe> | <https://gitlab.com/mksipe> |
 
-#### Here are some personal projects that I am especially proud of.
+#### Here are some personal projects that I am especially proud of:
 
 |HTS4|SSL|DBCrack|Caecrack|
 |:-:|:-:|:-:|:-:|
 |<https://github.com/mksipe/HTS4>|<https://github.com/mksipe/shell-script-lib>|<https://github.com/mksipe/dbcrack>|<https://github.com/caecrack>|
-|This tool was my first attempt at applying the rust language to find vulnerable software and pen-testing tools on a Linux/mac/windows system. | This was one of my very first projects on Github that I started while still in cyberpatriot. SSL was designed to help make hardening the Linux system easier. | This was my first attempt to make a password cracker in python. The project switched it to rust to help with resource efficiency and stability to make processing as fast as possible. The fundamental issue was using SQLite, and I learned a valuable lesson when choosing a database.| Caecrack was a shot as making an automatic Ceasar cipher cracker to make a mass toolkit in the National Cyber League to make the cryptography section easier.|
+|This tool was my first attempt at applying the rust language to find vulnerable software and pen-testing tools on a Linux/Mac/Windows system. | This was one of my very first projects on Github that I started while still in cyberpatriot. SSL was designed to help make hardening the Linux system easier. | This was my first attempt to make a password cracker in python. The project switched it to rust to help with resource efficiency and stability to make processing as fast as possible. The fundamental issue was using SQLite, and I learned a valuable lesson when choosing a database.| Caecrack was a shot as making an automatic Ceasar cipher cracker to make a mass toolkit in the National Cyber League to make the cryptography section easier.|   
 
 ## Group / Community Projects
 
-#### I have been active when it comes to helping the community with different issues regarding open source software. 
+#### I have been active when it comes to helping the community with different issues regarding open-source software. 
 
 ### [Summit Technology Academy Scoring System](https://gitlab.com/summit-technology-academy/stasc)
 
