@@ -54,8 +54,6 @@ ___
 
 #### I am active on most major platforms. If you have any questions, don't hesitate to ask me for anything.
 
-- [Github](<https://github.com/mksipe>)
-- [HackTheBox](<https://app.hackthebox.eu/users/216835>)
-- NCL -  Available upon request.
-- Discord - Available upon request.
-- [Email](<mailto:m-sipe@protonmail.com>)
+|HTB|GitHub|Discord|
+|-|-|-|
+ |<img src="http://www.hackthebox.eu/badge/image/216835" alt="Hack The Box"> | [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=mksipe&repo=mksipe)](https://github.com/anuraghazra/github-readme-stats)| `The Bread Man#1336`|
