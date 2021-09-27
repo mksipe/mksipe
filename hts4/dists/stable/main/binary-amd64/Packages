@@ -1,0 +1,14 @@
+Package: hts4
+Version: 1.0.0
+Architecture: amd64
+Maintainer: mksipe <masonsipe0513@gmail.com>
+Installed-Size: 838
+Depends: libc6 (>= 2.31)
+Filename: pool/main/hts4_1.0.0_amd64.deb
+Size: 287400
+MD5sum: 91e5458fd04c2f681c62c176fb3b0fbc
+SHA1: 5921eced6eaa1d96379b4dcc72719f2c5bd14c0f
+SHA256: 05b2a483e7dab0d4705e13db813da0e2851b33a49dc1504aa17131732df4e531
+Priority: optional
+Description: [generated from Rust crate hts4]
+
