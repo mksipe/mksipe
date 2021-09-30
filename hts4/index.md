@@ -56,7 +56,7 @@ There is the MAIN function in main.rs - This is required for rust to run. main.r
 
 There is the CringeLib in the cringe/src directory - Which holds the actual searching algorithm. Every file in that directory is referenced to the lib.rs file, called in the main.rs file. Every other file contains a list of the services to search.
 
-#### Modiying a List
+#### Modifying a List
 
 I have intentionally made the file easy to add onto. Say there is a tool that you find that was supposed to be in the program but isn't. say, [hashcat](https://hashcat.net), for example.
 
