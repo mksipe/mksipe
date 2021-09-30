@@ -14,6 +14,9 @@
         - [Modifying a List](#modifying-a-list)
         - [Adding a New Section](#adding-a-new-section)
     - [User Documentation](#user-documentation)
+        - [Installation](#installation)
+            - [Manual](#manual)
+            - [Automatic](#automatic)
 - [Process Documentation](#process-documentation)
 
 ### System  Documentation
@@ -40,7 +43,7 @@ On the specified system to deploy this tool, you must have [Cargo](https://crate
 ```sh
 apt install cargo # debian 
 pacman -syu cargo # arch
- ```
+```
 
 #### Design Descisions
 
@@ -151,5 +154,54 @@ You should have a functioning custom CLI option.
 
 
 ### User Documentation
+
+#### Installation
+
+Please revert to the supported operating systems before trying to make an install.
+
+##### Manual
+
+To make a manual installation, you need to download the [software](https://github.com/mksipe/hts4) via git or through an HTTP download.
+
+***
+>###### git
+
+ ```sh
+ git clone https://github.com/mksipe/hts4
+ cd hts4
+ ```
+***
+>###### http
+Click the green code button, 
+select Download ZIP
+
+```
+cd /home/$USER/Downloads
+tar xvf hts4-main.zip
+cd hts4
+```
+***
+
+With cargo already installed, all you need to do is use cargo to run the program.
+
+`cargo run -- <args>`
+
+##### Automatic
+
+An automatic installation will install the program to your system and place it in the /usr/bin directory
+> Install.ps1 does not work!
+
+After installing the program, all that is required is to do the following:
+
+> change executable permissions
+
+`chmod 700 Install.sh`
+
+> make install
+
+`sudo ./Install.sh`
+
+After the install, the source directory may be deleted
+
 
 ## Process Documentation
