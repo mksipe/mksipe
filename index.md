@@ -1,3 +1,5 @@
+<p style="text-align: center; font-size: 40px;"> Mason Sipe</p>
+
 <center><img align="center" width="150" height="150" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/me.jpg"></center>
 
 
