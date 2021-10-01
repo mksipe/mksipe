@@ -215,5 +215,5 @@ By default the following are built into the program.
 |-w|Searches for web binaries that have networking functionalty|
 |-i|Searches for language interprets on the system.|
 |-a|Runs all searches|
----
 
+---
