@@ -172,6 +172,7 @@ To make a manual installation, you need to download the [software](https://githu
  ```
 ***
 >###### http
+
 Click the green code button, 
 select Download ZIP
 
