@@ -17,7 +17,7 @@
         - [Installation](#installation)
             - [Manual](#manual)
             - [Automatic](#automatic)
-- [Process Documentation](#process-documentation)
+        - [Usage](#usage)
 
 ### System  Documentation
 
@@ -203,5 +203,17 @@ After installing the program, all that is required is to do the following:
 
 After the install, the source directory may be deleted
 
+#### Usage
 
-## Process Documentation
+By default the following are built into the program.
+
+|Args|Description|
+|-|-|
+|-e|Finds all executables that match the built in list|
+|-s|Finds services that are installed on a specific system|
+|-g|Finds game packages that may have been installed on a system|
+|-w|Searches for web binaries that have networking functionalty|
+|-i|Searches for language interprets on the system.|
+|-a|Runs all searches|
+---
+
