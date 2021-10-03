@@ -9,5 +9,4 @@
 
 ---
 
-###### [Home](https://github.com/mksipe/Home)
-
+###### [Home](https://mksipe.github.io/mksipe/Home)
