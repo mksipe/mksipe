@@ -1,7 +1,6 @@
 <p style="text-align: center; font-size: 40px;"> HTS4</p>
 
 ---
-# This is a WIP. It is not done.
 ## Project Documentation
 - [Project Documentation](#project-documentation)
     - [System Documentation](#system-documentation)
