@@ -217,3 +217,5 @@ By default the following are built into the program.
 |-a|Runs all searches|
 
 ---
+
+###### [Home](https://github.com/mksipe/Home)
