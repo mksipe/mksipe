@@ -35,7 +35,9 @@ This is a post about the various options you have in regards to your SSH configu
     - [Enable Logging](#authentication-logging)
     - [Local File Authentication](#strict-modes)
     - [PAM](#using-pam)
-### Client Configuration Options
+
+
+### Server Configuration Options
 
 > #### Configuration files are case sensitive. If there is an incorrect entry, the ssh service will stop. You can test the SSH configuration with `sshd -T`
 
@@ -53,57 +55,48 @@ This is a post about the various options you have in regards to your SSH configu
 > SSH configuration file : `/etc/ssh/sshd_config`
 
 #### Usage of X11 Forwarding
-
-If X11 is not needed, Disable it.
+: If X11 is not needed, Disable it.
 
 `X11Forwarding no`
 
 #### Disable rhosts
-
-Rhosts was a weak form of authentication when SSH was first widely used. It made it so that it would be trusted to connect if a machine were on the same IP range.
+: Rhosts was a weak form of authentication when SSH was first widely used. It made it so that it would be trusted to connect if a machine were on the same IP range.
 
 `IgnoreRhosts yes`
 
 
 #### DNS Hostname Checking
-
-DNS hostname checking will be a safeguard if you have an internal DNS server set up. Be careful if there is no internal DNS; this can add timeouts and other networking issues. 
+: DNS hostname checking will be a safeguard if you have an internal DNS server set up. Be careful if there is no internal DNS; this can add timeouts and other networking issues. 
 
 `UseDNS yes`
 
 #### Disable Empty Passwords
-
-Accounts should not be able to be accessed remotely without accountability. Restrict accounts password policy by prohibiting empty passwords.
+: Accounts should not be able to be accessed remotely without accountability. Restrict accounts password policy by prohibiting empty passwords.
 
 `PermitEmptyPasswords no`
 
 #### Maximum Authentication Attempts
-
-Slow down and prevent Brute force attacks on user enumeration and password attempts. 
+: Slow down and prevent Brute force attacks on user enumeration and password attempts. 
 
 `MaxAuthTries 3`
 
 #### Public Key Authentication
-
-If you choose not to use a password or want additional authentication for remote connections, you can allow public-key authentication.
+: If you choose not to use a password or want additional authentication for remote connections, you can allow public-key authentication.
 
 `PubkeyAuthentication yes`
 
 #### Disable Root Login
-
-It is best not to allow root to be allowed to login remotely. A user should be established to enable authentication and accounting, then they, individually, can use Sudo.
+: It is best not to allow root to be allowed to login remotely. A user should be established to enable authentication and accounting, then they, individually, can use Sudo.
 
 `PermitRootLogin no`
 
 #### Set the SSH Protocol
-
-Use the latest version of SSH.
+: Use the latest version of SSH.
 
 `Protocol 2`
 
 #### AllowUsers, DenyUsers, AllowGroups and DenyGroups
-
-You can deny ssh access to specific users and allow particular groups. The easiest way to manage this is with AllowGroups and add users to that and deny all else. However, as stated before, do as your specific situation needs. The concept of an implicit denial should be applied here to deny anyone who is not on a whitelist.
+: You can deny ssh access to specific users and allow particular groups. The easiest way to manage this is with AllowGroups and add users to that and deny all else. However, as stated before, do as your specific situation needs. The concept of an implicit denial should be applied here to deny anyone who is not on a whitelist.
 
 > Side note, according to [ServerFault](https://serverfault.com/questions/617081/how-to-use-both-allowgroups-and-allowusers-in-sshd-config) the order of these entries are processed in the following: DenyUsers, AllowUsers, DenyGroups, 
 
@@ -112,51 +105,43 @@ You can deny ssh access to specific users and allow particular groups. The easie
 `AllowGroups ssh-users`
 
 #### Use HashKnownHosts
-
-When a successful connection is made with SSH, the connection information is stored in the user directory `.ssh`. However, this can be a risk in case of a compromise. You can hash this information using the HashKnownHosts option.
+: When a successful connection is made with SSH, the connection information is stored in the user directory `.ssh`. However, this can be a risk in case of a compromise. You can hash this information using the HashKnownHosts option.
 
 `HashKnownHosts ssh`
 
 #### Port
-
-You can manually change the port SSH uses upon startup. Changing the default port is an excellent way to prevent bots and users from directly targetting your ssh port based upon default configuration knowledge.
+: You can manually change the port SSH uses upon startup. Changing the default port is an excellent way to prevent bots and users from directly targetting your ssh port based upon default configuration knowledge.
 
 `port 42451`
 
 #### Change Default Grace Time
-
-By default, you have two minutes to log in. After those two minutes, the server will terminate the connection.
+: By default, you have two minutes to log in. After those two minutes, the server will terminate the connection.
 
 `LoginGracetime 60`
 
 
 #### ClientAliveCountMax
-
-This setting checks the real, alive connection and sets a limit to it.
+: This setting checks the real, alive connection and sets a limit to it.
 
 `ClientAliveCountMax 5`
 
 
 #### ClientAliveInterval
-
-This setting indicates the timeout in seconds. After a set of seconds, the server will send a message to the client asking for a response. 
+: This setting indicates the timeout in seconds. After a set of seconds, the server will send a message to the client asking for a response. 
 
 `ClientAliveInterval 600`
 
 #### Sandbox Privileges
-
-You can sandbox users' authentication to create trusted and untrusted processes on the server. i.e., a user is thrown into a sandboxed environment upon logging in; then, once credentials are verified, the daemon will put them into a legitimate process.
+: You can sandbox users' authentication to create trusted and untrusted processes on the server. i.e., a user is thrown into a sandboxed environment upon logging in; then, once credentials are verified, the daemon will put them into a legitimate process.
 
 `UsePrivilegeSeparation sandbox`
 
 
 #### Authentication Logging
-
-You can specify if you want logging enabled upon the daemon, authentication, or authentication privilege.
+: You can specify if you want logging enabled upon the daemon, authentication, or authentication privilege.
 
 `SyslogFacility AUTHPRIV`
-
-You can also specify the logging intensity.
+: You can also specify the logging intensity.
 
 `LogLevel VERBOSE` - shows all logs
 
@@ -164,14 +149,12 @@ You can also specify the logging intensity.
 
 
 #### Strict Modes
-
-This option specifies whether ssh should check the file modes and ownership of the user's files and home directory before accepting login.
+: This option specifies whether ssh should check the file modes and ownership of the user's files and home directory before accepting login.
 
 `StrictModes yes`
 
 #### Using PAM
-
-You can choose to use Pluggable Authentication Modules if you prefer. However, some other settings automatically enable when you do this, leading to security complications, such as ChallengeResponseAuthentication being changed to yes. As stated, if not required, do not use.
+: You can choose to use Pluggable Authentication Modules if you prefer. However, some other settings automatically enable when you do this, leading to security complications, such as ChallengeResponseAuthentication being changed to yes. As stated, if not required, do not use.
 
 `UsePAM yes`
 
