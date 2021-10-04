@@ -24,7 +24,10 @@ This post is to show the different options toward hardening the default password
     - [Using a Safer UMASK](#using-a-safer-umask)
 - [Password Complexity](#setting-password-complexity-with-pam)
     - [Common Password](#common-password-file)
-
+    - [User Account Control](#set-user-access-control)
+    - [Set User Limits](#set-user-limits)
+    - [Temporary Files and Permissions](#temporary-directories-and-pam)
+    - [Undefined PAM Applications](#configure-undefined-pam-applications)
 ### Login Defaults
 
 The `/etc/login.defs` file is designed to apply default values to a user when they are not previously def
@@ -101,9 +104,63 @@ password    required      pam_deny.so
 
 What this addition does makes it so that passwords now are required to be at least 16 caracters long, require a lowercase, uppercase, digit, special character, and no dictionary words within a password. 
 
+#### Set User Access Control
+
+The root user can only log into the system locally from terminals.
+
+`/etc/pam.d/login`
+
+`  auth     requisite  pam_securetty.so`
+
+
+#### Set User Limits
+
+"If you want to protect su, so that only some people can use it to become root on your system, you need to add a new group "wheel" to your system (that is the cleanest way, since no file has such a group permission yet). Add root and the other users that should be able to su to the root user to this group. Then add the following line to /etc/pam.d/su: " (Prev Securing Debian Manual).
+
+`/etc/pam.d/login`
+
+`session  required   pam_limits.so`
+
+`  auth        requisite   pam_wheel.so group=wheel debug`
+
+
+`/etc/pam.d/ssh`
+
+`  auth        required    pam_listfile.so item=user sense=allow file=/etc/sshusers-allowed onerr=fail`
+
+#### Temporary Directories and PAM
+
+This module requires `libpam-tmpdir` package. This will prevent insecure file exposure, i.e., https://www.debian.org/security/2005/dsa-883
+
+`/etc/pam.d/common-session`
+
+` session    optional     pam_tmpdir.so`
+
+
+##### Configure Undefined PAM Applications
+
+`/etc/pam.d/other`
+
+```
+  auth     required       pam_securetty.so
+  auth     required       pam_unix_auth.so
+  auth     required       pam_warn.so
+  auth     required       pam_deny.so
+  account  required       pam_unix_acct.so
+  account  required       pam_warn.so
+  account  required       pam_deny.so
+  password required       pam_unix_passwd.so
+  password required       pam_warn.so
+  password required       pam_deny.so
+  session  required       pam_unix_session.so
+  session  required       pam_warn.so
+  session  required       pam_deny.so
+```
 
 
 ###### Sources:
+
+- ###### https://www.debian.org/doc/manuals/securing-debian-manual/ch04s11.en.html
 
 ---
 
