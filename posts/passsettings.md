@@ -30,18 +30,17 @@ This post is to show the different options toward hardening the default password
     - [Undefined PAM Applications](#configure-undefined-pam-applications)
 ### Login Defaults
 
-The `/etc/login.defs` file is designed to apply default values to a user when they are not previously def
-ined. ***These values are not applied unless a user is created.***
+The `/etc/login.defs` file is designed to apply default values to a user when they are not previously defined. ***These values are not used unless a user is created.***
 
 #### Set the Maximum Password Expire
 
-Setting the maximum time for a password to be used enhances security by forcing a user to change their password after logging in after x days.
+Setting the maximum time for a password to be used enhances security by forcing users to change their password after logging in after x days.
 
 `PASS_MAX_DAYS 60`
 
 #### Set the Minimum Password Expire
 
-Setting the minimum amount of time until a password can help in case of a compromise and a user's password can still be used, at this point, an administrator would have to change it. 
+Setting the minimum amount of time until a password can help in case of a compromise and a user's password can still be used; at this point, an administrator would have to change it. 
 
 `PASS_MIN_DAYS 7`
 
@@ -59,24 +58,24 @@ Warn users upon an upcoming password change.
 
 #### Using a Safer UMASK
 
-Chaning the usmask chooses the default file permissions which is 077
+Changing the umask chooses the default file permissions, which is 077
 
-This should be changed to retain privacy and security.
+The UMASK should be changed to retain privacy and security.
 
-`UMASK 027` - `UMASK 022` is also preferred
+`UMASK 027` - `UMASK 022` is also preferred.
 
-this should also be changed in the /etc/rc.d/rc file as well
+The UMASK should also be changed in the /etc/rc.d/rc file as well
 
 
 ### Setting Password Complexity with PAM
 
-You can also specify specific requirements with PAM in order to only allow passwords that have specific characters in them.
+You can also specify specific requirements with PAM to only allow passwords that have particular characters in them.
 
-You need to have the `libpam-cracklib` package installed in order for this section to work.  
+You need to have the `libpam-cracklib` package installed for this section to work.  
 
 #### Common Password File
 
-The common password file sets the specific requirements in order to allow specific passwords to be used.
+The common password file sets the specific requirements to allow specific passwords to be used.
 
 `/etc/pam.d/common-password`
 
@@ -87,7 +86,7 @@ password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_autht
 password    required      pam_deny.so
 ```
 
-> It is suggested to backup your pam files. If you don't you may not be able to authenticate.
+> It is suggested to backup your pam files. If you don't, you may not be able to authenticate.
 
 
 You need to add the following after `requisite pam_cracklib.so`
@@ -102,7 +101,7 @@ password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_autht
 password    required      pam_deny.so
 ```
 
-What this addition does makes it so that passwords now are required to be at least 16 caracters long, require a lowercase, uppercase, digit, special character, and no dictionary words within a password. 
+This addition makes it so that passwords now are required to be at least 16 characters long, need a lowercase, uppercase, digit, unique character, and no dictionary words within a password. 
 
 #### Set User Access Control
 
@@ -130,7 +129,7 @@ The root user can only log into the system locally from terminals.
 
 #### Temporary Directories and PAM
 
-This module requires `libpam-tmpdir` package. This will prevent insecure file exposure, i.e., https://www.debian.org/security/2005/dsa-883
+This module requires the `libpam-tmpdir` package. This package will prevent insecure file exposure, i.e., https://www.debian.org/security/2005/dsa-883
 
 `/etc/pam.d/common-session`
 
