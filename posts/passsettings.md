@@ -28,6 +28,8 @@ This post is to show the different options toward hardening the default password
     - [Set User Limits](#set-user-limits)
     - [Temporary Files and Permissions](#temporary-directories-and-pam)
     - [Undefined PAM Applications](#configure-undefined-pam-applications)
+
+    
 ### Login Defaults
 
 The `/etc/login.defs` file is designed to apply default values to a user when they are not previously defined. ***These values are not used unless a user is created.***
