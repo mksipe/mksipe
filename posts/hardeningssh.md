@@ -185,4 +185,4 @@ You can choose to use Pluggable Authentication Modules if you prefer. However, s
 
 ---
 
-###### [Home](https://mksipe.github.io/mksipe/Home)
+###### [Home](https://mksipe.github.io/mksipe/)

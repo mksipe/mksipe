@@ -3,9 +3,9 @@
 
 |Date|Title|Type|
 |:-  |:-:| -:|
-|10/3/21|[Hardening SSH](https://mksipe.github.io/mksipe/posts/hardeningssh)|System Hardening|
+|10/3/21|[Hardening SSH](https://mksipe.github.io/mksipe/posts/hardeningssh)|Software Hardening|
 
 
 ---
 
-###### [Home](https://mksipe.github.io/mksipe/Home)
+###### [Home](https://mksipe.github.io/mksipe/)
