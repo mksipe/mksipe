@@ -4,7 +4,7 @@
 
 ##### Metadata
 
-###### Last revised - 10/8/21
+###### Last revised - 10/10/21
 
 ###### Author       - Mason Sipe
 
@@ -23,6 +23,36 @@ The article will cover a majority of commonly misconfigured settings in differen
     - [Disabling Core Dumps](#disabling-core-dumps)
     - [Wabbit Mitiation](#preventing-a-fork-bomb-rabbit-virus-wabbit)
     - [SystemCtl](#systemctl)
+        - [Packet Forwarding](#packet-forwarding)
+        - [No Routing](#no-routing)
+        - [SysRQ](#sysrq)
+        - [Core Dumps Append PID](#core-dumps-append-pid)
+        - [Syn-Flood Protection](#syn-flood-protection)
+        - [Disable IPv4 Routing](#disable-ipv4-routing)
+        - [Deny Secure Routing (we are not a router)](#deny-secure-routing-we-are-not-a-router)
+        - [We do Not Redirect Traffic](#we-do-not-redirect-traffic)
+        - [Log Impossible Addresses](#log-impossible-addresses)
+        - [Ignore ICMP Requests and Broadcasts](#ignore-icmp-requests-and-broadcasts)
+        - [Prevent Against Common Syn Flood Attacks](#prevent-against-common-syn-flood-attacks)
+        - [Source Validation by Reverse Path](#source-validation-by-reverse-path)
+        - [Default Source Route Verification](#default-source-route-verification)
+        - [This is a Host](#this-is-a-host)
+        - [Accept Router's Preference in Router Advertisements](#accept-routers-preference-in-router-advertisements)
+        - [Learn Prefix in Routers Advertisement](#learn-prefix-in-routers-advertisement)
+        - [Accept Hop Limit](#accept-hop-limit)
+        - [Assign Global Unicast Address on an Interface](#assign-global-unicast-address-on-an-interface)
+        - [Neighbor Solicitation per Address](#neighbor-solicitation-per-address)
+        - [Enable ExecShield Protection](#enable-execshield-protection)
+        - [Optimize TCP and Memory](#optimize-tcp-and-memory)
+        - [Increase Auto Tuning TCP Buffer](#increase-auto-tuning-tcp-buffer)
+        - [Increase Filesystem Descriptor Limit](#increase-filesystem-descriptor-limit)
+        - [Allow for More PIDs](#allow-for-more-pids)
+        - [Increase System IP Port Limit](#increase-system-ip-port-limit)
+        - [Fix for RFC 1337](#fix-for-rfc-1337)
+        - [Reboot After Kernel Panic](#reboot-after-kernel-panic)
+        - [Ignore Bad ICMP Errors](#ignore-bad-icmp-errors)
+        - [Safely Use Links](#safely-use-links)
+- [Sources](#sources)
 
 ### Disabling Core Dumps
 
@@ -215,7 +245,7 @@ net.ipv6.conf.default.autoconf = 0
 ```
 
 
-#### Neighbor Solicitation per address
+#### Neighbor Solicitation per Address
 
 ```bash
 net.ipv6.conf.default.dad_transmits = 0
@@ -269,6 +299,27 @@ Prevents TIME-WAIT assasinations.
 
 ```bash
 net.ipv4.tcp_rfc1337=1
+```
+
+
+#### Reboot After Kernel Panic
+
+```bash
+kernel.panic=10
+```
+
+
+
+#### Ignore Bad ICMP Errors
+
+```bash
+net.ipv4.icmp_ignore_bogus_error_responses=1
+```
+
+#### Safely Use Links 
+```bash
+fs.protected_hardlinks=1
+fs.protected_symlinks=1
 ```
 
 ###### Sources:
