@@ -35,7 +35,7 @@ This is a post about the various options you have in regards to your SSH configu
     - [Enable Logging](#authentication-logging)
     - [Local File Authentication](#strict-modes)
     - [PAM](#using-pam)
-
+- [Sources](#sources)
 
 ### Server Configuration Options
 
