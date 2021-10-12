@@ -324,7 +324,7 @@ fs.protected_symlinks=1
 ###### Sources:
 
 ###### - <https://www.cyberciti.biz/faq/disable-core-dumps-in-linux-with-systemd-sysctl/>
-###### - https://www.cyberciti.biz/faq/linux-kernel-etcsysctl-conf-security-hardening/
+###### - <https://www.cyberciti.biz/faq/linux-kernel-etcsysctl-conf-security-hardening/>
 ###### - <https://www.cyberciti.biz/tips/linux-limiting-user-process.html>
 ---
 

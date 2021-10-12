@@ -161,7 +161,7 @@ This module requires the `libpam-tmpdir` package. This package will prevent inse
 
 ###### Sources:
 
-- ###### https://www.debian.org/doc/manuals/securing-debian-manual/ch04s11.en.html
+- ###### <https://www.debian.org/doc/manuals/securing-debian-manual/ch04s11.en.html>
 
 ---
 

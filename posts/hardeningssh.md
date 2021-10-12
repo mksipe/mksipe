@@ -161,10 +161,10 @@ This is a post about the various options you have in regards to your SSH configu
 ---
 
 ###### Sources:
-###### - https://serverfault.com/questions/617081/how-to-use-both-allowgroups-and-allowusers-in-sshd-config
-###### - https://www.ssh.com/academy/ssh/config
-###### - https://linux-audit.com/audit-and-harden-your-ssh-configuration/
-###### - https://www.thegeekstuff.com/2011/05/openssh-options/
+###### - <https://serverfault.com/questions/617081/how-to-use-both-allowgroups-and-allowusers-in-sshd-config>
+###### - <https://www.ssh.com/academy/ssh/config>
+###### - <https://linux-audit.com/audit-and-harden-your-ssh-configuration/>
+###### - <https://www.thegeekstuff.com/2011/05/openssh-options/>
 
 ---
 
