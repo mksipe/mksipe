@@ -4,7 +4,7 @@
 
 ##### Metadata
 
-###### Last revised - 10/4/21
+###### Last revised - 10/19/21
 
 ###### Author       - Mason Sipe
 
@@ -28,6 +28,11 @@ This post is to show the different options toward hardening the default password
     - [Set User Limits](#set-user-limits)
     - [Temporary Files and Permissions](#temporary-directories-and-pam)
     - [Undefined PAM Applications](#configure-undefined-pam-applications)
+- [Defining](#applying-new-password-settings-to-a-user)
+    - [Viewing User Password Information](#viewing-password-information)
+    - [Change Expire Date](#change-expire-date)
+    - [Locking an Account](#locking-an-account)
+    - [All Values](#all-values)
 - [Sources](#sources)
     
 ### Login Defaults
@@ -158,11 +163,76 @@ This module requires the `libpam-tmpdir` package. This package will prevent inse
   session  required       pam_deny.so
 ```
 
+#### Applying New Password Settings to a User
+
+Changing the `login.defs` file changes the default login and does not apply the settings to existing users. So if you used these settings after a series of users have been created, this can result in users having the default values from the previous file that was present. PAM settings are dynamic and are applied upon authentication so those settings are already in effect.
+
+##### Viewing Password Information
+
+To view the current password expiriary information:
+
+
+`chage -l <user>`
+
+```bash
+<OUTPUT>
+
+Last password change                    : Jul 26, 2018
+Password expires                        : never
+Password inactive                       : never
+Account expires                         : never
+Minimum number of days between password change        : 0
+Maximum number of days between password change        : 99999
+Number of days of warning before password expires     : 7
+
+<OUTPUT>
+
+```
+
+##### Change Expire Date
+
+This sets the maximum amount of days that a password can be in effect.
+
+`chage -M <days> <user>`
+
+
+##### Change Warn Date
+
+
+This set the password warn days to warn the user until the password is expired.
+
+
+`chage -W <days> <user>`
+
+
+##### Locking an Account
+
+To immediately lock out an account you can do that with:
+
+`usermod -L <user>`
+
+To set a specific date to lock out an account, you can do that with:
+
+`chage -E <date> <user>`
+
+##### All Values
+
+You are not required to know every command or review the manpage in order to change the specified user's password settings. You can simply run the command with no arguments and it will prompt you for settings.
+
+
+`chage <user>`
+
+According to `die.net` on manpage 1:
+
+```man
+If none of the options are selected, chage operates in an interactive fashion, prompting the user with the current values for all of the fields. Enter the new value to change the field, or leave the line blank to use the current value. The current value is displayed between a pair of [ ] marks. 
+```
 
 ###### Sources:
 
 - ###### <https://www.debian.org/doc/manuals/securing-debian-manual/ch04s11.en.html>
-
+- ###### <https://www.howtoforge.com/linux-chage-command/>
+- ###### <https://linux.die.net/man/1/chage>
 ---
 
 ###### [Home](https://mksipe.github.io/mksipe/)
