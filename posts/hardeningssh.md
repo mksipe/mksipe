@@ -4,7 +4,7 @@
 
 ##### Metadata
 
-###### Last revised - 10/2/21
+###### Last revised - 10/25/21
 
 ###### Author       - Mason Sipe
 
@@ -36,6 +36,10 @@ This is a post about the various options you have in regards to your SSH configu
     - [Local File Authentication](#strict-modes)
     - [PAM](#using-pam)
 - [Sources](#sources)
+
+### Background
+
+SSH is a versatile service that allows remote access to devices across the internet. It typically, by default, runs on port 22, allows unlimited attempts, and has no timeout for passwords. It uses public-key authentication to encrypt traffic between devices to allow for encrypted communication and remote access. The predecessor (Telnet)[https://en.wikipedia.org/wiki/Telnet] uses a similar concept. However, it provides no encryption, and all commands can be seen in plaintext. It is mandatory to use SSH over telnet.
 
 ### Server Configuration Options
 

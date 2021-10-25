@@ -4,7 +4,7 @@
 
 ##### Metadata
 
-###### Last revised - 10/10/21
+###### Last revised - 10/25/21
 
 ###### Author       - Mason Sipe
 
@@ -16,6 +16,10 @@ This post is about hardening the core components of the Linux kernel.
 The article will cover a majority of commonly misconfigured settings in different system files for daily usage of the Linux system. This post will also help with restricting available information that may be valuable to a perpetrator.
 
 ---
+
+## Background
+
+The system control file is a file that directly modifies the settings of the running Linux kernel. The sysctl.conf file is designed to override the default kernel values. These values are essential as they change network settings, kernel settings, security settings, limits, and other potentially sensitive or critical settings. 
 
 ## Table of Contents
 
@@ -316,6 +320,7 @@ net.ipv4.icmp_ignore_bogus_error_responses=1
 ```
 
 #### Safely Use Links 
+
 ```bash
 fs.protected_hardlinks=1
 fs.protected_symlinks=1
