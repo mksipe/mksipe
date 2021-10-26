@@ -20,28 +20,28 @@ The File Transfer Protocol has multiple uses throughout a specific network archi
 ## Table of Contents
 
 - [VSFTPD](#vsftpd)
-    - [Disable Public Access](#disable-public-access)
-    - [Local User Login](#local-user-login)
-    - [Restricting Access to a User's Home Directory](#restricting-access-to-a-users-home-directory)
-    - [Enabling SSL/TLS Encryption](#enabling-ssltls-encryption)
-    - [Enable Logging](#enable-logging)
-    - [Disabling Writing](#disabling-writing)
-    - [Banner Settings](#banner-settings)
-    - [Default UMASK](#default-umask)
-    - [Anonymous Upload](#anonymous-upload)
-    - [Anonymous Create Directories](#anonymous-create-directories)
-    - [Directory Messages](#directory-messages)
-    - [Port Transfers Originate Properly](#port-transfers-originate-properly)
-    - [Specific Anonymous Ownership](#specific-anonymous-ownership)
-    - [Idle Session Timeout](#idle-session-timeout)
-    - [Data Session Timeout](#data-session-timeout)
-    - [Unprivileged User Daemon](#unprivileged-user-daemon)
-    - [Disable ABOR Requests](#disable-abor-requests)
-    - [Ascii Mangling](#ascii-mangling)
-    - [Customize Login Banner](#customize-login-banner)
-    - [Deny Specific Email Addresses](#deny-specific-email-addresses)
-    - [Listening](#listening)
-    - [Other settings](#other-settings)
+  - [Disable Public Access](#disable-public-access)
+  - [Local User Login](#local-user-login)
+  - [Restricting Access to a User's Home Directory](#restricting-access-to-a-users-home-directory)
+  - [Enabling SSL/TLS Encryption](#enabling-ssltls-encryption)
+  - [Enable Logging](#enable-logging)
+  - [Disabling Writing](#disabling-writing)
+  - [Banner Settings](#banner-settings)
+  - [Default UMASK](#default-umask)
+  - [Anonymous Upload](#anonymous-upload)
+  - [Anonymous Create Directories](#anonymous-create-directories)
+  - [Directory Messages](#directory-messages)
+  - [Port Transfers Originate Properly](#port-transfers-originate-properly)
+  - [Specific Anonymous Ownership](#specific-anonymous-ownership)
+  - [Idle Session Timeout](#idle-session-timeout)
+  - [Data Session Timeout](#data-session-timeout)
+  - [Unprivileged User Daemon](#unprivileged-user-daemon)
+  - [Disable ABOR Requests](#disable-abor-requests)
+  - [Ascii Mangling](#ascii-mangling)
+  - [Customize Login Banner](#customize-login-banner)
+  - [Deny Specific Email Addresses](#deny-specific-email-addresses)
+  - [Listening](#listening)
+  - [Other settings](#other-settings)
 - [ProFTPD](#proftpd)
   - [Set Server Type](#set-server-type)
   - [Set a Server Name](#set-a-server-name)
@@ -78,7 +78,10 @@ The File Transfer Protocol has multiple uses throughout a specific network archi
   - [Limit Recursion](#limit-recursion)
   - [Set a UMASK](#set-a-umask-1)
 - [Sources](#sources)
-### VSFTPD
+
+---
+
+> ### VSFTPD
 (Very Secure FTP Daemon)
 
 Configuraion = `/etc/vsftpd.conf` or `/etc/vsftpd/vsftpd.conf`
@@ -278,7 +281,10 @@ pam_service_name=vsftpd
 userlist_enable=YES
 tcp_wrappers=YES
 ```
-### ProFTPD 
+
+---
+
+> ### ProFTPD 
 Configuration = `/etc/proftpd//proftpd.conf`
 
 #### Set Server Type
@@ -410,7 +416,9 @@ This is only useful for logging, which can be done when needed. Not while servin
 
 `  AllowOverride off`
 
-### PureFTPD
+---
+
+> ### PureFTPD
 
 Configuration = `/etc/pure-ftpd/pure-ftpd.conf`
 
