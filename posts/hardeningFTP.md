@@ -405,6 +405,52 @@ This is only useful for logging, which can be done when needed. Not while servin
 
 ### PureFTPD
 
+Configuration = `/etc/pure-ftpd/pure-ftpd.conf`
+
+#### Chroot Everyone
+
+This will make everyone see their own files in their home directory. They cannot see other people's files or directories.
+
+`ChrootEveryone yes`
+
+#### No Anonymous Access
+
+This denies any anonymous attempts to login to the server without written credentials.
+
+`NoAnonymous yes`
+
+#### Max Clients
+
+Set a limit to the amount of clients that can connect simuoltaneously.
+
+`MaxClientsNumber 50`
+
+#### Max Clients Per IP
+
+Set maximum connections for a single internet protocol address
+
+`MaxClientsPerIP 1`
+
+#### Idle Timeout
+
+Computers left idle are dangerous to the remote connection for a physical session hijack.
+
+`MaxIdleTime 1`
+
+#### Limit Recursion
+
+Set a limit to the files that will be listed when the `ls` command is executed.
+
+`LimitRecursion 500 8`
+
+#### Set a UMASK
+
+Default file permissions are not secured. Change it to a secured value.
+
+`Umask 022`
+
+
+
 ---
 
 ###### Sources:
