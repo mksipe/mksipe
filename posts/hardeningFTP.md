@@ -409,19 +409,19 @@ Configuration = `/etc/pure-ftpd/pure-ftpd.conf`
 
 #### Chroot Everyone
 
-This will make everyone see their own files in their home directory. They cannot see other people's files or directories.
+This will make everyone see their files in their home directory. They cannot see other people's files or directories.
 
 `ChrootEveryone yes`
 
 #### No Anonymous Access
 
-This denies any anonymous attempts to login to the server without written credentials.
+This denies any anonymous attempts to log in to the server without written credentials.
 
 `NoAnonymous yes`
 
 #### Max Clients
 
-Set a limit to the amount of clients that can connect simuoltaneously.
+Set a limit to the number of clients that can connect simultaneously.
 
 `MaxClientsNumber 50`
 
@@ -445,10 +445,9 @@ Set a limit to the files that will be listed when the `ls` command is executed.
 
 #### Set a UMASK
 
-Default file permissions are not secured. Change it to a secured value.
+Default file permissions are not secured. Change it to a guaranteed value.
 
 `Umask 022`
-
 
 
 ---
