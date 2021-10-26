@@ -1,7 +1,7 @@
 <p style="text-align: center; font-size: 40px;">Posts</p>
 
 
-|Date|Title|Type|
+|Publish Date|Title|Category|
 |:-  |:-| -:|
 |10/25/21   |[Hardening FTP](https://mksipe.github.io/mksipe/posts/hardeningFTP)|Software Hardening|
 |10/19/21   |[Password Settings](https://mksipe.github.io/mksipe/posts/passsettings)|Password Policies|

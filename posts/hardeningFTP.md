@@ -70,6 +70,13 @@ The File Transfer Protocol has multiple uses throughout a specific network archi
   - [Deny Overriding Server Settings](#deny-overriding-server-settings)
   - [Disable .ftpaccess  File Checking in Every Directory](#disable-ftpaccess-file-checking-in-every-directory)
 - [PureFTPD](#pureftpd)
+  - [Chroot Everyone](#chroot-everyone)
+  - [No Anonymous Access](#no-anonymous-access)
+  - [Max Clients](#max-clients)
+  - [Max Clients Per IP](#max-clients-per-ip)
+  - [Idle Timeout](#idle-timeout)
+  - [Limit Recursion](#limit-recursion)
+  - [Set a UMASK](#set-a-umask-1)
 - [Sources](#sources)
 ### VSFTPD
 (Very Secure FTP Daemon)
@@ -443,7 +450,7 @@ Set a limit to the files that will be listed when the `ls` command is executed.
 
 `LimitRecursion 500 8`
 
-#### Set a UMASK
+#### Set a UMASK 
 
 Default file permissions are not secured. Change it to a guaranteed value.
 
