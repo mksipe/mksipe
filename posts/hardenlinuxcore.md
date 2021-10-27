@@ -86,7 +86,7 @@ A fork bomb is of what follows: `:(){ :|:& };:`. (DO NOT RUN THIS IN A SHELL)
 This process continuously creates child processes that infinitely spawn their processes, depleting your system of resources. 
 
 
-<img align="center" width="1000" height="800" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/Wabbit.png">
+<img align="center" width="900" height="800" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/Wabbit.png">
 
 A detailed explanation of how fork bombs work is in [this](https://www.cyberciti.biz/faq/understanding-bash-fork-bomb/) article.
 
