@@ -88,7 +88,6 @@ With Cargo already installed, all you need to do is use Cargo to run the program
 ##### Automatic
 
 An automatic installation will install the program to your system and place it in the /usr/bin directory
-> Install.ps1 does not work!
 
 After installing the program, all that is required is to do the following:
 
