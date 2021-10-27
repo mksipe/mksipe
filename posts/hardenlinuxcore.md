@@ -85,25 +85,8 @@ A fork bomb is of what follows: `:(){ :|:& };:`. (DO NOT RUN THIS IN A SHELL)
 
 This process continuously creates child processes that infinitely spawn their processes, depleting your system of resources. 
 
-```mermaid
-graph TD;
-    Parent_Process-->Fork;
-    Fork-->Child_Process_A;
-    Fork-->Child_Process_B;
-    Child_Process_A-->ForkA1;
-    Child_Process_A-->ForkA2;
-    Child_Process_B-->ForkB1;
-    Child_Process_B-->ForkB2;
-    ForkA1-->Child_Process_A1;
-    ForkA1-->Child_Process_A2;
-    ForkA2-->Child_Process_AA1;
-    ForkA2-->Child_Process_AA2;    
-    ForkB1-->Child_Process_B1;
-    ForkB1-->Child_Process_B2;
-    ForkB2-->Child_Process_BB1;
-    ForkB2-->Child_Process_BB2;
-```
 
+<img align="center" width="55" height="50" src="https://raw.githubusercontent.com/mksipe/mksipe/gh-pages/_layouts/assets/Wabbit.png">
 
 A detailed explanation of how fork bombs work is in [this](https://www.cyberciti.biz/faq/understanding-bash-fork-bomb/) article.
 
