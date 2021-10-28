@@ -4,7 +4,7 @@
 
 ##### Metadata
 
-###### Last revised - 10/25/21
+###### Last revised - 10/28/21
 
 ###### Author       - Mason Sipe
 
@@ -161,12 +161,15 @@ net.ipv4.conf.all.accept_source_route = 0
 ```bash
 net.ipv4.conf.all.accept_redirects = 0
 net.ipv4.conf.all.secure_redirects = 0
+net.ipv6.conf.all.accept_redirects = 0
+net.ipv6.conf.default.accept_redirects = 0
 ```
 
 #### Log Impossible Addresses
 
 ```bash
 net.ipv4.conf.all.log_martians = 1
+net.ipv4.conf.default.log_martians = 1
 net.ipv4.conf.default.accept_source_route = 0
 net.ipv4.conf.default.accept_redirects = 0
 net.ipv4.conf.default.secure_redirects = 0
@@ -309,11 +312,121 @@ fs.protected_hardlinks=1
 fs.protected_symlinks=1
 ```
 
+
+#### Prevent Autoloading of ldiscs
+
+The kernel, by default, will load any module of any line discipline that is requested. This is not one of the safest settings to have enabled. Systemctl can disable this feature with:
+
+```bash
+dev.tty.ldisc_autoload = 0
+```
+
+#### Protect First in First Out
+
+Data is passed through the kernel before it is written to the filesystem. This will help prevent arbitrary code from being exploited.
+
+```bash
+fs.protected_fifos = 2
+```
+#### Restrict Exposed Kernel Addresses
+
+According to kernel.org: 
+```"
+When kptr_restrict is set to 0 (the default) the address is hashed before
+printing. (This is the equivalent to %p.)
+
+When kptr_restrict is set to (1), kernel pointers printed using the %pK
+format specifier will be replaced with 0's unless the user has CAP_SYSLOG
+and effective user and group ids are equal to the real ids. This is
+because %pK checks are done at read() time rather than open() time, so
+if permissions are elevated between the open() and the read() (e.g via
+a setuid binary) then %pK will not leak kernel pointers to unprivileged
+users. Note, this is a temporary solution only. The correct long-term
+solution is to do the permission checks at open() time. Consider removing
+world read permissions from files that use %pK, and using dmesg_restrict
+to protect against uses of %pK in dmesg(8) if leaking kernel pointer
+values to unprivileged users is a concern.
+
+When kptr_restrict is set to (2), kernel pointers printed using
+%pK will be replaced with 0's regardless of privileges."
+```
+To apply the most secure settings:
+
+```bash
+kernel.kptr_restrict = 2
+```
+
+#### CVE-2020-8835 
+
+According to mitre cve: 
+
+```
+In the Linux kernel 5.5.0 and newer, the bpf verifier (kernel/bpf/verifier.c) did not properly restrict the register bounds for 32-bit operations, leading to out-of-bounds reads and writes in kernel memory. The vulnerability also affects the Linux 5.4 stable series, starting with v5.4.7, as the introducing commit was backported to that branch. This vulnerability was fixed in 5.6.1, 5.5.14, and 5.4.29. (issue is aka ZDI-CAN-10780) 
+```
+
+To fix this issue:
+
+```bash
+kernel.unprivileged_bpf_disabled = 1
+```
+
+#### Protect Against Ptrace Processes
+
+According to Linux-audit:
+
+```
+Servers
+
+If your system is running in the DMZ and processes high sensitive data, there is usually no reason to allow ptrace at all. Best is to disable it completely (kernel.Yama.ptrace_scope = 3).
+
+For servers in general, you might want to apply rule, or choose a slightly less restrictive value (2 or 1).
+Desktops
+
+On desktop systems where you are the only user, can have a less restricted option (2, 1 or even disabled).
+
+The Yama LSM is also used in Google Chrome, as can been seen in the related screenshot. [I will not include this screenshot. see sources for the full article.]
+
+```
+
+```bash
+kernel.yama.ptrace_scope = 1 2 3
+```
+#### Harden Just In Time Compiler
+
+According to kernel.org:
+
+```
+bpf_jit_harden
+--------------
+
+This enables hardening for the BPF JIT compiler. Supported are eBPF
+JIT backends. Enabling hardening trades off performance, but can
+mitigate JIT spraying.
+Values :
+	0 - disable JIT hardening (default value)
+	1 - enable JIT hardening for unprivileged users only
+	2 - enable JIT hardening for all users
+
+```
+
+The safest setting for this kernel setting would be:
+```bash
+net.core.bpf_jit_harden = 2
+```
+
+
+
+
+
+
 ###### Sources:
 
 ###### - <https://www.cyberciti.biz/faq/disable-core-dumps-in-linux-with-systemd-sysctl/>
 ###### - <https://www.cyberciti.biz/faq/linux-kernel-etcsysctl-conf-security-hardening/>
 ###### - <https://www.cyberciti.biz/tips/linux-limiting-user-process.html>
+###### - <https://www.kernel.org/doc/Documentation/sysctl/kernel.txt>
+###### - <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8835>
+###### - <https://linux-audit.com/protect-ptrace-processes-kernel-yama-ptrace_scope/>
 ---
 
 ###### [Home](https://mksipe.github.io/mksipe/)
