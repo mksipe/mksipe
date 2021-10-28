@@ -56,6 +56,12 @@ The system control file is a file that directly modifies the settings of the run
         - [Reboot After Kernel Panic](#reboot-after-kernel-panic)
         - [Ignore Bad ICMP Errors](#ignore-bad-icmp-errors)
         - [Safely Use Links](#safely-use-links)
+        - [Prevent Autoloading of ldiscs](#prevent-autoloading-of-ldiscs)
+        - [Protect First in First Out](#protect-first-in-first-out)
+        - [Restrict Exposed Kernel Addresses](#restrict-exposed-kernel-addresses)
+        - [CVE-2020-8835](#cve-2020-8835)
+        - [Protect Against Ptrace Processes](#protect-against-ptrace-processes)
+        - [Harden Just In Time Compiler](#harden-just-in-time-compiler)
 - [Sources](#sources)
 
 ### Disabling Core Dumps
