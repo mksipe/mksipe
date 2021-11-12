@@ -435,4 +435,4 @@ net.core.bpf_jit_harden = 2
 ###### - <https://linux-audit.com/protect-ptrace-processes-kernel-yama-ptrace_scope/>
 ---
 
-###### [Home](https://mksipe.github.io/mksipe/)
+###### [Home](https://mksipe.github.io/mksipe/) | [Privacy Policy](https://mksipe.github.io/mksipe/Privacy)

@@ -235,4 +235,4 @@ If none of the options are selected, chage operates in an interactive fashion, p
 - ###### <https://linux.die.net/man/1/chage>
 ---
 
-###### [Home](https://mksipe.github.io/mksipe/)
+###### [Home](https://mksipe.github.io/mksipe/) | [Privacy Policy](https://mksipe.github.io/mksipe/Privacy)

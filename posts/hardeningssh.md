@@ -172,4 +172,4 @@ SSH is a versatile service that allows remote access to devices across the inter
 
 ---
 
-###### [Home](https://mksipe.github.io/mksipe/)
+###### [Home](https://mksipe.github.io/mksipe/) | [Privacy Policy](https://mksipe.github.io/mksipe/Privacy)

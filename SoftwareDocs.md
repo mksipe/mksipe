@@ -10,4 +10,4 @@
 
 ---
 
-###### [Home](https://mksipe.github.io/mksipe/)
+###### [Home](https://mksipe.github.io/mksipe/) | [Privacy Policy](https://mksipe.github.io/mksipe/Privacy)

@@ -481,4 +481,5 @@ Default file permissions are not secured. Change it to a guaranteed value.
 - ###### <http://www.proftpd.org/docs/howto/BCP.html>
 ---
 
-###### [Home](https://mksipe.github.io/mksipe/)
+
+###### [Home](https://mksipe.github.io/mksipe/) | [Privacy Policy](https://mksipe.github.io/mksipe/Privacy)
