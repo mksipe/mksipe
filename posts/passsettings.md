@@ -4,7 +4,7 @@
 
 ##### Metadata
 
-###### Last revised - 10/19/21
+###### Last revised - 11/15/21
 
 ###### Author       - Mason Sipe
 
@@ -28,6 +28,8 @@ This post is to show the different options toward hardening the default password
     - [Set User Limits](#set-user-limits)
     - [Temporary Files and Permissions](#temporary-directories-and-pam)
     - [Undefined PAM Applications](#configure-undefined-pam-applications)
+    - [ Automatic Accounts Blocking](#automatic-accounts-blocking)
+    - [Blocking Root Access](#blocking-root-access)
 - [Defining](#applying-new-password-settings-to-a-user)
     - [Viewing User Password Information](#viewing-password-information)
     - [Change Expire Date](#change-expire-date)
@@ -74,6 +76,16 @@ The UMASK should be changed to retain privacy and security.
 The UMASK should also be changed in the /etc/rc.d/rc file as well
 
 
+#### Setting Encryption Method
+
+You can manually set the encryption method in login.defs.
+
+`ENCRYPT_METHOD SHA512`
+
+You can also set the miniumum rounds of that specific method.
+
+`SHA_CRYPT_MIN_ROUNDS 65536`
+
 ### Setting Password Complexity with PAM
 
 You can also specify specific requirements with PAM to only allow passwords that have particular characters in them.
@@ -90,7 +102,7 @@ The common password file sets the specific requirements to allow specific passwo
 ```
 password    requisite     pam_cracklib.so try_first_pass retry=3
 password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_authtok
-password    required      pam_deny.so
+password    required      pam_deny.so obscure sha512 rounds=65536
 ```
 
 > It is suggested to backup your pam files. If you don't, you may not be able to authenticate.
@@ -103,7 +115,7 @@ You need to add the following after `requisite pam_cracklib.so`
 The file should look like this:
 
 ```
-password    requisite     pam_cracklib.so try_first_pass retry=3 minlength=16 lcredit=-1 ucredit=-1 dcredit=-1 ocredit=-1 difok=4
+password    requisite     pam_cracklib.so try_first_pass retry=3 minlength=16 lcredit=-1 ucredit=-1 dcredit=-1 ocredit=-1 difok=4 ocredit=0 mexrepeat=-1 maxsequence=1 gecoscheck reject_username enforce_for_root
 password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_authtok sha512
 password    required      pam_deny.so
 ```
@@ -162,6 +174,20 @@ This module requires the `libpam-tmpdir` package. This package will prevent inse
   session  required       pam_warn.so
   session  required       pam_deny.so
 ```
+
+##### Blocking Root Access
+
+files: /etc/pam.d/su /etc/pam.d/sudo 
+
+This prohibits root access to members of the wheel group
+
+`auth       required        pam_wheel.so`
+
+##### Automatic Accounts Blocking
+
+files: /etc/pam.d/logn /etc/pam.d/sshd
+
+`auth       required        pam_tally.so deny=3 lock_time=300`
 
 #### Applying New Password Settings to a User
 
@@ -233,6 +259,7 @@ If none of the options are selected, chage operates in an interactive fashion, p
 - ###### <https://www.debian.org/doc/manuals/securing-debian-manual/ch04s11.en.html>
 - ###### <https://www.howtoforge.com/linux-chage-command/>
 - ###### <https://linux.die.net/man/1/chage>
+- ###### <https://www.ssi.gouv.fr/en/guide/configuration-recommendations-of-a-gnulinux-system/>
 ---
 
 ###### [Home](https://mksipe.github.io/mksipe/)
