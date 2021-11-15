@@ -262,4 +262,4 @@ If none of the options are selected, chage operates in an interactive fashion, p
 - ###### <https://www.ssi.gouv.fr/en/guide/configuration-recommendations-of-a-gnulinux-system/>
 ---
 
-###### [Home](https://mksipe.github.io/mksipe/)
+###### [Home](https://mksipe.github.io/mksipe/) | [Privacy Policy](https://mksipe.github.io/mksipe/Privacy)

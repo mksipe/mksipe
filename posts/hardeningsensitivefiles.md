@@ -17,3 +17,10 @@ This post is designed to set awareness of the individual changes for files that 
 ## Background:
 
 Some files on linux are by default readable by unprivileged users which is a problem. Throughout the evolution of linux, logs, core dumps, and other sorts of information has been stored on your system which contains sensitive information which should be protected.
+
+###### Sources:
+
+
+---
+
+###### [Home](https://mksipe.github.io/mksipe/) | [Privacy Policy](https://mksipe.github.io/mksipe/Privacy)
