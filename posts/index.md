@@ -3,7 +3,7 @@
 
 |Publish Date|Title|Category|
 |:-  |:-| -:|
-|11/15/21|  |[Hardening Sensitive Files](https://mksipe.github.io/mksipe/posts/hardeningsensitivefiles)|Filesystem Integirty|
+|11/15/21   |[Hardening Sensitive Files](https://mksipe.github.io/mksipe/posts/hardeningsensitivefiles)|Filesystem Integirty|
 |11/8/21    |[Hardening Boot Parameters](https://mksipe.github.io/mksipe/posts/hardenbootparams)|Kernel Hardening|
 |10/25/21   |[Hardening FTP](https://mksipe.github.io/mksipe/posts/hardeningFTP)|Software Hardening|
 |10/19/21   |[Password Settings](https://mksipe.github.io/mksipe/posts/passsettings)|Password Policies|
