@@ -82,7 +82,7 @@ You can manually set the encryption method in login.defs.
 
 `ENCRYPT_METHOD SHA512`
 
-You can also set the miniumum rounds of that specific method.
+You can also set the minimum rounds of that specific method.
 
 `SHA_CRYPT_MIN_ROUNDS 65536`
 
@@ -105,7 +105,7 @@ password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_autht
 password    required      pam_deny.so obscure sha512 rounds=65536
 ```
 
-> It is suggested to backup your pam files. If you don't, you may not be able to authenticate.
+> It is suggested to backup your pam files. If you do not, you may not be able to authenticate.
 
 
 You need to add the following after `requisite pam_cracklib.so`
@@ -148,7 +148,7 @@ The root user can only log into the system locally from terminals.
 
 #### Temporary Directories and PAM
 
-This module requires the `libpam-tmpdir` package. This package will prevent insecure file exposure, i.e., https://www.debian.org/security/2005/dsa-883
+This module requires the `libpam-tmpdir` package. This package will prevent insecure file exposure, i.e., https://www.debian.org/security/2005/dsa-883.
 
 `/etc/pam.d/common-session`
 
@@ -179,7 +179,7 @@ This module requires the `libpam-tmpdir` package. This package will prevent inse
 
 files: /etc/pam.d/su /etc/pam.d/sudo 
 
-This prohibits root access to members of the wheel group
+Adding this setting prohibits root access to members of the wheel group.
 
 `auth       required        pam_wheel.so`
 
@@ -191,11 +191,11 @@ files: /etc/pam.d/logn /etc/pam.d/sshd
 
 #### Applying New Password Settings to a User
 
-Changing the `login.defs` file changes the default login and does not apply the settings to existing users. So if you used these settings after a series of users have been created, this can result in users having the default values from the previous file that was present. PAM settings are dynamic and are applied upon authentication so those settings are already in effect.
+Changing the `login.defs` file changes the default login and does not apply the settings to existing users. So if you used these settings after a series of users have been created, this can result in users having the default values from the previous file that was present. PAM settings are dynamic and are applied upon authentication, so those settings are already in effect.
 
 ##### Viewing Password Information
 
-To view the current password expiriary information:
+To view the current password expiry information:
 
 
 `chage -l <user>`
@@ -225,7 +225,7 @@ This sets the maximum amount of days that a password can be in effect.
 ##### Change Warn Date
 
 
-This set the password warn days to warn the user until the password is expired.
+This setting sets the password to warn days to warn the user until the password is expired.
 
 
 `chage -W <days> <user>`
@@ -233,7 +233,7 @@ This set the password warn days to warn the user until the password is expired.
 
 ##### Locking an Account
 
-To immediately lock out an account you can do that with:
+To immediately lock out an account, you can do that with:
 
 `usermod -L <user>`
 
@@ -243,7 +243,7 @@ To set a specific date to lock out an account, you can do that with:
 
 ##### All Values
 
-You are not required to know every command or review the manpage in order to change the specified user's password settings. You can simply run the command with no arguments and it will prompt you for settings.
+You are not required to know every command or review the man page to change the specified user's password settings. You can run the command with no arguments, and it will prompt you for settings.
 
 
 `chage <user>`
@@ -251,7 +251,7 @@ You are not required to know every command or review the manpage in order to cha
 According to `die.net` on manpage 1:
 
 ```man
-If none of the options are selected, chage operates in an interactive fashion, prompting the user with the current values for all of the fields. Enter the new value to change the field, or leave the line blank to use the current value. The current value is displayed between a pair of [ ] marks. 
+If none of the options are selected, the chage operates interactively, prompting the user with the current fields' values. Enter the new value to change the field, or leave the line blank to use the current value. The current value is displayed between a pair of [ ] marks. 
 ```
 
 ###### Sources:

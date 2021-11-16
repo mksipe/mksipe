@@ -27,7 +27,7 @@ Some files on Linux are by default readable by unprivileged users, which is a pr
 - [Sticky Bit File Attributes](#sticky-bit-file-attributes)
 ### Common Executables
 
-According to ANSSI, these files must be protected and verified after each update to maintain proper file permissions.
+According to ANSSI, these files must be protected and verified to maintain proper file permissions after each update.
 
 |Executable|Comment|
 |:-|-:|
@@ -73,7 +73,7 @@ It is recommended to install one of these packages to mitigate this: `pam_mktemp
 
     ### Sticky Bit File Attributes
 
-The sticky bit, according to technopedia, is "a permission bit which is set on a file or folder, thereby permitting only the owner or root user of the File or folder to modify, rename or delete the concerned directory or File. No other user would be allowed to have these privileges on a file which has a sticky bit.
+The sticky bit, according to technopedia, is "a permission bit which is set on a file or folder, thereby permitting only the owner or root user of the File or folder to modify, rename or delete the concerned directory or File. No other user would be allowed to have these privileges on a file that has a sticky bit.
 "
 This command shows files that anybody can modify without a sticky bit.
 
@@ -83,7 +83,7 @@ same command, but with root ownership
 
 `find / -type d -perm -0002 -a \! -uid 0 -ls 2>/dev/null`
 
-find files that can be modified by anyone
+find files that anyone can modify
 
 `find / -type f -perm -0002 -ls 2>/dev/null`
 
