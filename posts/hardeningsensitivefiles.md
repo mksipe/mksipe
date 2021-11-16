@@ -71,7 +71,7 @@ By default, the /tmp directory is readable and writable to everyone on the syste
 
 It is recommended to install one of these packages to mitigate this: `pam_mktemp`, `pam_namespace`, `pam_tmpdir`.
 
-    ### Sticky Bit File Attributes
+### Sticky Bit File Attributes
 
 The sticky bit, according to technopedia, is "a permission bit which is set on a file or folder, thereby permitting only the owner or root user of the File or folder to modify, rename or delete the concerned directory or File. No other user would be allowed to have these privileges on a file that has a sticky bit.
 "
