@@ -318,21 +318,6 @@ fs.protected_hardlinks=1
 fs.protected_symlinks=1
 ```
 
-
-<<<<<<< HEAD
-
-TO ADD 
-
-dev.tty.ldisc_autoload = 0
-fs.protected_fifos = 2
-kernel.kptr_restrict = 2
-kernel.unprivileged_bpf_disabled = 1
-kernel.yama.ptrace_scope = 1 2 3
-net.core.bpf_jit_harden = 2
-net.ipv4.conf.default.log_martians = 1
-net.ipv6.conf.all.accept_redirects = 0
-net.ipv6.conf.default.accept_redirects = 0
-=======
 #### Prevent Autoloading of ldiscs
 
 The kernel, by default, will load any module of any line discipline that is requested. This is not one of the safest settings to have enabled. Systemctl can disable this feature with:
@@ -433,12 +418,6 @@ The safest setting for this kernel setting would be:
 ```bash
 net.core.bpf_jit_harden = 2
 ```
-
-
-
-
->>>>>>> 855eee3e16afbe74b01671082d02e3bb37b677cb
-
 
 ###### Sources:
 
