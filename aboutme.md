@@ -39,6 +39,8 @@ ___
 ### [Lynis](https://github.com/CISOfy/lynis)
 > #### When I find issues within certain projects such as applied hardening software, I try to point this out and send a fix to help the community as a whole.
 
+### [Data Science and Mining](https://github.com/mksipe/DSM-Project)
+> #### This project is an exploratory data analysis program that attempts to recognize any network traffic patterns using machine learning. A supervised model was used to determine if specific traffic contributed to a Denial of Service or was benign. The outcome of this project was to find any trends or patterns within the data provided within the dataset.
 ___
 
 ## Certifications
